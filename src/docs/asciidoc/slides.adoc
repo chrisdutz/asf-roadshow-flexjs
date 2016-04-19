@@ -1,12 +1,14 @@
-Christofer Dutz <christofer.dutz@codecentric.de>
-
-= FlexJS
+== !
 
 image::flex-logo.png[]
 
 Christofer Dutz <christofer.dutz@codecentric.de>
 
 2016-04-19
+
+== !
+
+WARNING: Views are my own and don't reflect the views of the Apache Software Foundation or codecentric.
 
 == Apache Flex
 
