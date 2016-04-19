@@ -1,0 +1,161 @@
+Christofer Dutz <christofer.dutz@codecentric.de>
+
+= FlexJS
+
+image::flex-logo.png[]
+
+Christofer Dutz <christofer.dutz@codecentric.de>
+
+2016-04-19
+
+== Apache Flex
+
+* Framework zum Entwickeln von Rich Internet Applications (RIAs)
+* Lösungen laufen im Flashplayer oder Air Runtime
+* Flex + Flash äquivalent zu Appletts im Browser
+* Flex + Air äquivalent zu Java Programmen in der JVM
+* Code wird in ActionScript3 geschrieben
+* Markup wird in MXML geschrieben
+* Styling mit CSS
+
+== JavaScript
+
+* ECMAScript 1: 06.1997
+* ECMAScript 2: 06.1998
+* ECMAScript 3: 12.1999
+* ECMAScript 4: 10.2008
+** Nie offiziell veröffentlicht
+* ECMAScript 5: 06.2015
+** Kleine Verbesserungen zu version 3
+
+* Seit 1999 keine signifikannte Veränderung in JavaScript
+
+== ActionScript3
+
+* ActionScript3 is einzige implementation von ECMAScript 4
+* Einfühung von:
+** Starker Typisierung
+** Klassen
+** Packages
+** E4X (ECMAScript for XML)
+** ...
+
+== Apache FlexJS
+
+* Neuer Compiler
+* Reimplementation des Flex SDK
+** Altlasten über Bord geworfen
+** Einführen neuer Konzepte
+* Ausgabe des Compilers:
+** Flash
+** HTML5
+
+== Entwicklungsszenarien
+
+=== Klassish -> Flash
+
+[ditaa,asciidoctor-diagram-classic]
+....
++-----------------+     +----------------+
+|                 |     |                |
+|   source-code   |     | Flex framework |
+|                 |     |                |
++--------------+--+     +--+-------------+
+               |           |
+               v           v
+           +-------------------+
+           |                   |
+           |  FlexJS Compiler  |
+           |                   |
+           +---------+---------+
+                     |
+                     v
+           +-------------------+
+           |                   |
+           | Flash application |
+           |                   |
+           +---------+---------+
+                     |
+                     v
+           +-------------------+
+           |                   |
+           |    FlashPlayer    |
+           |                   |
+           +-------------------+
+....
+
+=== FlexJS SDK -> Flash & HTML5
+
+[ditaa,asciidoctor-diagram-flexjs]
+....
++-----------------+     +------------------+
+|                 |     |                  |
+|   source-code   |     | FlexJS framework |
+|                 |     |                  |
++--------------+--+     +--+---------------+
+               |           |
+               v           v
+           +-------------------+
+           |                   |
+           |  FlexJS Compiler  |
+           |                   |
+           +---------+---------+
+               |           |
+               v           v
++-----------------+     +-----------------+
+|                 |     |                 |
+| Flash appl.     |     | HTML5 appl.     |
+|                 |     |                 |
++-----------------+     +-----------------+
+         |                       |
+         v                       v
++-----------------+     +-----------------+
+|                 |     |                 |
+| FlashPlayer     |     | Web Browser     |
+|                 |     |                 |
++-----------------+     +-----------------+
+....
+
+=== JavaScript in ActionScript3 -> HTML5
+
+[ditaa,asciidoctor-diagram-javascript]
+....
++-----------------+   +----------------+   +----------------+
+|                 |   |                |   |                |
+|   source-code   |   | Extern Adapter |   | JS Library     |
+|                 |   |                |   |                |
++---------------+-+   +--------+-------+   +-+--------------+
+                |              |             |
+                v              v             v
+               +------------------------------+
+               |                              |
+               |  FlexJS Compiler             |
+               |                              |
+               +---------------+--------------+
+                               |
+                               v
+               +------------------------------+
+               |                              |
+               |  HTML5 Application           |
+               |                              |
+               +---------------+--------------+
+                               |
+                               v
+               +------------------------------+
+               |                              |
+               |  Web Browser                 |
+               |                              |
+               +------------------------------+
+....
+
+== Aktuelle Arbeit im Projekt
+
+* Umstellen von Ant -> Maven
+* Implementation eines FlexJS-Maven-Plugin
+* Implementation eines Converters
+** Automatischer Download von Flash, Air, SDK
+** Erstellt aus SDK ZIP Download Maven artefakte
+* BlazeDS
+* FlexPMD
+
+== Vielen Dank
