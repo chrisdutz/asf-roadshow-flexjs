@@ -1,14 +1,21 @@
+// Don't center the slides vertically
+:revealjs_center: false
+// Display the current slide number in the bottom right
+:revealjs_slidenumber: true
+// The slide-id is added to the browser-url allowing to reload to the same page
+:revealjs_history: true
+
 == !
 
 image::flex-logo.png[]
 
 Christofer Dutz <christofer.dutz@codecentric.de>
 
-2016-04-19
+2016-04-20
 
-== !
+== Disclaimer
 
-WARNING: Views are my own and don't reflect the views of the Apache Software Foundation or codecentric.
+WARNING: Die Informationen auf dieser Präsentation spiegelt die Meinung der Autoren wider und nicht zwangsläufig die der Apache Software Foundation oder codecentic.
 
 == Apache Flex
 
@@ -52,16 +59,14 @@ WARNING: Views are my own and don't reflect the views of the Apache Software Fou
 ** Flash
 ** HTML5
 
-== Entwicklungsszenarien
-
-=== Klassish -> Flash
+== Klassish -> Flash
 
 [ditaa,asciidoctor-diagram-classic]
 ....
 +-----------------+     +----------------+
 |                 |     |                |
 |   source-code   |     | Flex framework |
-|                 |     |                |
+|              {d}|     |                |
 +--------------+--+     +--+-------------+
                |           |
                v           v
@@ -86,14 +91,14 @@ WARNING: Views are my own and don't reflect the views of the Apache Software Fou
            +-------------------+
 ....
 
-=== FlexJS SDK -> Flash & HTML5
+== FlexJS SDK -> Flash & HTML5
 
 [ditaa,asciidoctor-diagram-flexjs]
 ....
 +-----------------+     +------------------+
 |                 |     |                  |
 |   source-code   |     | FlexJS framework |
-|                 |     |                  |
+|              {d}|     |                  |
 +--------------+--+     +--+---------------+
                |           |
                v           v
@@ -118,14 +123,14 @@ WARNING: Views are my own and don't reflect the views of the Apache Software Fou
 +-----------------+     +-----------------+
 ....
 
-=== JavaScript in ActionScript3 -> HTML5
+== JavaScript in ActionScript3 -> HTML5
 
 [ditaa,asciidoctor-diagram-javascript]
 ....
 +-----------------+   +----------------+   +----------------+
 |                 |   |                |   |                |
 |   source-code   |   | Extern Adapter |   | JS Library     |
-|                 |   |                |   |                |
+|              {d}|   |                |   |                |
 +---------------+-+   +--------+-------+   +-+--------------+
                 |              |             |
                 v              v             v
