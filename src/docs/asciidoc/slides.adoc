@@ -7,11 +7,11 @@
 
 == !
 
-image::flex-logo.png[]
+image::flexjs-logo-light.png[]
 
 Christofer Dutz <christofer.dutz@codecentric.de>
 
-2016-04-20
+2016-09-15
 
 == Disclaimer
 
@@ -27,21 +27,9 @@ WARNING: Die Informationen auf dieser Präsentation spiegelt die Meinung der Aut
 * Markup wird in MXML geschrieben
 * Styling mit CSS
 
-== JavaScript
-
-* ECMAScript 1: 06.1997
-* ECMAScript 2: 06.1998
-* ECMAScript 3: 12.1999
-* ECMAScript 4: 10.2008
-** Nie offiziell veröffentlicht
-* ECMAScript 5: 06.2015
-** Kleine Verbesserungen zu version 3
-
-* Seit 1999 keine signifikannte Veränderung in JavaScript
-
 == ActionScript3
 
-* ActionScript3 is einzige implementation von ECMAScript 4
+* ActionScript3 is einzige Implementation von ECMAScript 4
 * Einfühung von:
 ** Starker Typisierung
 ** Klassen
@@ -129,7 +117,7 @@ WARNING: Die Informationen auf dieser Präsentation spiegelt die Meinung der Aut
 ....
 +-----------------+   +----------------+   +----------------+
 |                 |   |                |   |                |
-|   source-code   |   | Extern Adapter |   | JS Library     |
+|   source-code   |   |    Typedefs    |   |   JS Library   |
 |              {d}|   |                |   |                |
 +---------------+-+   +--------+-------+   +-+--------------+
                 |              |             |
@@ -155,14 +143,36 @@ WARNING: Die Informationen auf dieser Präsentation spiegelt die Meinung der Aut
                +------------------------------+
 ....
 
+== Vergleich mit Typescript
+
+* Gleicher Ansatz
+** Entwickeln in einer Sprache -> Cross Compilen nach JavaScript
+* Meistens gleiche Terminologie
+** Typedefs
+* Leicht reduzierter Funktionsumfang
+** Keine Generics in FlexJS
+** Keine Arrow Functions (Lambda Ausdrücke)
+** Keine Enums
+
+== Vorteil von FlexJS
+
+* Kein Vendor Lock-In
+* Gigantische Vielzahl etablierter Frameworks
+** Viele Libs auch in FlexJS lauffähig
+* Migration in die HTML5 Welt
+** Anpassungen an der UI nötig
+** Restliche Logik kann größtenteils übernommen werden
+
 == Aktuelle Arbeit im Projekt
 
 * Umstellen von Ant -> Maven
 * Implementation eines FlexJS-Maven-Plugin
-* Implementation eines Converters
-** Automatischer Download von Flash, Air, SDK
-** Erstellt aus SDK ZIP Download Maven artefakte
+** Unit-/Integration-Test Support
 * BlazeDS
-* FlexPMD
+** AMF JavaScript library
+* Erweitern des Sprachumfangs um
+** Generics
+** Arrow-Functions
+** Enums
 
 == Vielen Dank
